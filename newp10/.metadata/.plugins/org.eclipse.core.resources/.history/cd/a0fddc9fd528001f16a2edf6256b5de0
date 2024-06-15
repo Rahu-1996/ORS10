@@ -1,0 +1,16 @@
+package com.rays.service;
+
+import com.rays.common.BaseServiceInt;
+import com.rays.common.UserContext;
+import com.rays.dto.WishDTO;
+
+/**
+ * 
+ * User Service interface.
+ * Rahul Choudhary 
+ * 
+ */
+
+public interface WishServiceInt extends BaseServiceInt<WishDTO> {
+
+}

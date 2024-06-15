@@ -1,0 +1,34 @@
+package com.rays.service;
+
+import com.rays.common.BaseServiceInt;
+import com.rays.common.UserContext;
+import com.rays.dto.WishDTO;
+
+/**
+ * 
+ * User Service interface.
+ * Rahul Choudhary 
+ * 
+ */
+
+public interface WishServiceInt extends BaseServiceInt<WishDTO> {
+
+	/**
+	 * Finds User by name.
+	 * 
+	 * @param name
+	 * @return
+	 */
+	public WishDTO findByLoginId(String name, UserContext userContext);
+	
+	public WishDTO findByEmail(String email, UserContext userContext);
+
+	public WishDTO authenticate(String loginId, String password);
+
+	public WishDTO changePassword(String loginId, String oldPassword, String newPassword, UserContext userContext);
+
+	public WishDTO forgotPassword(String loginId);
+
+	public WishDTO register(WishDTO dto);
+
+}
